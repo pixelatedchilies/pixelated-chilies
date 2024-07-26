@@ -9,7 +9,7 @@ const Navbar = () => {
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -24,19 +24,19 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm flex flex-col gap-2 dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-4 shadow"
             >
               <li>
-                <a>Home</a>
+                <a className="text-base">Home</a>
               </li>
               <li>
-                <a>About Us</a>
+                <a className="text-base">About Us</a>
               </li>
               <li>
-                <a>Services</a>
+                <a className="text-base">Services</a>
               </li>
               <li>
-                <a>Contact Us</a>
+                <a className="text-base">Contact Us</a>
               </li>
             </ul>
           </div>
