@@ -25,7 +25,7 @@ const Footer = () => {
           <a className="link link-hover">Imprint</a>
         </nav>
       </div>
-      <div className="footer text-base-content border-base-100 border-t px-10 py-4">
+      <div className="footer text-base-content border-base-100 border-t px-6 md:px-10 py-4">
         <aside className="grid-flow-col items-center">
           <svg
             width="24"
