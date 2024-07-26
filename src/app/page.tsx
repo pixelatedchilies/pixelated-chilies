@@ -3,7 +3,7 @@ import FlippingCart from "./ui/FlippingCard";
 export default function Home() {
   return (
     <main className="container mx-auto my-4 px-4">
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <FlippingCart
           title={"Web Design & Development"}
           description="Craft visually stunning and functionally robust websites that leave a lasting impression."
