@@ -37,10 +37,8 @@ export default function Home() {
             src="/social-recruiting.svg"
           />
         </div>
-        <div className="flex flex-wrap my-12">
-          <div className="md:w-3/6">
-            <Video />
-          </div>
+        <div className="flex flex-wrap my-12 gap-1">
+          <div className="md:w-3/6 bg-white rounded-3xl"></div>
           <div className="md:w-3/6 flex flex-col gap-2">
             <div className="collapse collapse-arrow border border-slate-700 hover:bg-base-200 transition duration-300">
               <input type="radio" name="my-accordion-2" defaultChecked />

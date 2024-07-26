@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="md:container md:mx-auto border border-slate-700 rounded-3xl mx-4 my-8">
       <div className="footer text-base-content p-10">
         <nav>
-          <h6 className="footer-title">Services</h6>
+          <h6 className="font-semibold text-white">Services</h6>
           <a className="link link-hover">Web Design & Development</a>
           <a className="link link-hover">E-Commerce Shop</a>
           <a className="link link-hover">Social Media Management</a>
@@ -12,14 +12,14 @@ const Footer = () => {
           <a className="link link-hover">Social Recruiting</a>
         </nav>
         <nav>
-          <h6 className="footer-title">Company</h6>
+          <h6 className="font-semibold text-white">Company</h6>
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Services</a>
           <a className="link link-hover">Help</a>
           <a className="link link-hover">Contact us</a>
         </nav>
         <nav>
-          <h6 className="footer-title">Legal</h6>
+          <h6 className="font-semibold text-white">Legal</h6>
           <a className="link link-hover">Terms of use</a>
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Imprint</a>

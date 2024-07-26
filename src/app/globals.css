@@ -8,3 +8,8 @@
     max-width: 1280px;
   }
 }
+
+html,
+body {
+  letter-spacing: -0.5px;
+}
