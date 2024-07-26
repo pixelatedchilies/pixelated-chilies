@@ -1,113 +1,118 @@
-import Image from "next/image";
+import FlippingCart from "./ui/FlippingCard";
+import { Video } from "./ui/video";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className="container mx-auto mt-24 px-4">
+        <div className="grid md:grid-cols-3 gap-4">
+          <FlippingCart
+            title={"Web Design & Development"}
+            description="Craft visually stunning and functionally robust websites that leave a lasting impression
+"
+            src="/web-development.svg"
+          />
+          <FlippingCart
+            title={`E-Commerce Shop`}
+            description="Not only showcase your products but also drive sales and customer engagement
+"
+            src="/e-commerce.svg"
+          />
+          <FlippingCart
+            title={"Social Media Management"}
+            description="Create captivating landing pages optimized for maximum engagement and lead generation
+"
+            src="/social-media.svg"
+          />
+          <FlippingCart
+            title={"Brand Design"}
+            description="From logo design and brand guidelines to messaging and storytelling, we craft a cohesive brand identity
+"
+            src="/brand-design.svg"
+          />
+          <FlippingCart
+            title={`Interactive Funnels`}
+            description="Streamline your customer journey and maximize conversions with expertly crafted funnels
+"
+            src="/interactive-funnels.svg"
+          />
+          <FlippingCart
+            title={"Social Recruiting & Talent Acquisition"}
+            description="Create captivating landing pages optimized for maximum engagement and lead generation.
+"
+            src="/social-recruiting.svg"
+          />
+        </div>
+        <div className="flex flex-wrap my-12">
+          <div className="md:w-3/6">
+            <Video />
+          </div>
+          <div className="md:w-3/6 flex flex-col gap-2">
+            {" "}
+            <div className="collapse collapse-arrow border border-slate-700 hover:bg-base-200 transition duration-300">
+              <input type="radio" name="my-accordion-2" defaultChecked />
+              <div className="collapse-title text-xl text-white font-medium">
+                01. Endless Possibilities
+              </div>
+              <div className="collapse-content">
+                <p>
+                  Unlock endless possibilities with Pixelated Chilies. As a
+                  dynamic digital solutions provider, we specialize in a diverse
+                  range of services tailored to elevate your online presence.{" "}
+                </p>
+                <p>
+                  From captivating web design and development to seamless
+                  e-commerce solutions, strategic social media management, and
+                  impactful branding initiatives, we empower businesses to
+                  thrive in the digital landscape.{" "}
+                </p>
+                <p>
+                  Dive into our expertise, including crafting engaging funnels,
+                  optimizing conversion flows, and beyond. With Pixelated
+                  Chilies, the potential for your online success knows no
+                  boundaries.
+                </p>
+              </div>
+            </div>
+            <div className="collapse collapse-arrow border border-slate-700 hover:bg-base-200 transition duration-300">
+              <input type="radio" name="my-accordion-2" />
+              <div className="collapse-title text-xl text-white font-medium">
+                02. Process Optimization
+              </div>
+              <div className="collapse-content">
+                <p>
+                  We're all about igniting growth and shaking up how companies
+                  do digital marketing.
+                </p>
+                <p>
+                  We kick things off with strategic planning that sets the stage
+                  for killer campaigns blending everything from spicy social
+                  media to fiery content.
+                </p>
+                <p>
+                  Our data-driven insights keep things cooking, making sure your
+                  marketing stays hot and fresh.
+                </p>
+                <p>Let's turn up the heat on your competition together!</p>
+              </div>
+            </div>
+            <div className="collapse collapse-arrow border border-slate-700 hover:bg-base-200 transition duration-300">
+              <input type="radio" name="my-accordion-2" />
+              <div className="collapse-title text-xl text-white font-medium">
+                03. Ongoing Support
+              </div>
+              <div className="collapse-content">
+                <p>Our support doesn't end when your campaign goes live.</p>
+                <p>
+                  We're here for you every step of the way, ensuring your
+                  success remains steady.
+                </p>
+                <p>Let's keep the momentum going together!</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }
