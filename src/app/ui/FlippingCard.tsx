@@ -3,14 +3,23 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const FlippingCart = ({
-  src,
-  title,
-  description,
-}: {
+interface FlippingCardProps {
   src: string;
   title: string;
   description: string;
+  tools: string;
+  toolsImageProps?: {
+    width: number;
+    height: number;
+  };
+}
+
+const FlippingCart: React.FC<FlippingCardProps> = ({
+  src,
+  title,
+  description,
+  tools,
+  toolsImageProps,
 }) => {
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
 
@@ -39,7 +48,7 @@ const FlippingCart = ({
               height={70}
               priority
             />
-            <h2 className="text-lg text-white font-semibold text-center">
+            <h2 className="text-lg text-white font-normal text-center">
               {title}
             </h2>
             <Image
@@ -51,11 +60,19 @@ const FlippingCart = ({
           </div>
           {/* Back Side */}
           <div className="flip-card-back flex flex-col gap-4 justify-center items-center py-20 px-6 border border-slate-700 rounded-3xl bg-blue-500">
-            <h2 className="text-lg text-white font-bold text-center">
+            <h2 className="text-lg text-white font-normal text-center">
               {description}
             </h2>
+            {toolsImageProps && (
+              <Image
+                src={tools}
+                width={toolsImageProps?.width || 200}
+                height={toolsImageProps?.height || 31}
+                alt="Flip card arrow icon"
+              />
+            )}
             <button
-              className="btn btn-primary btn-sm font-normal"
+              className="btn btn-primary font-normal"
               onClick={handleButtonClick}
             >
               Get Started

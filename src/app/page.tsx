@@ -15,14 +15,18 @@ export default function Home() {
           tomorrow&apos;s landscape with creativity and vision.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {services.map(({ id, title, description, src }) => (
-            <FlippingCart
-              title={title}
-              description={description}
-              src={src}
-              key={id}
-            />
-          ))}
+          {services.map(
+            ({ id, title, description, src, tools, toolsImageProps }) => (
+              <FlippingCart
+                title={title}
+                description={description}
+                src={src}
+                tools={tools}
+                key={id}
+                toolsImageProps={toolsImageProps}
+              />
+            )
+          )}
         </div>
         <div className="flex flex-wrap my-12 gap-1">
           <div className="md:w-3/6 bg-white rounded-3xl"></div>
