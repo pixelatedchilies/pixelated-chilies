@@ -3,7 +3,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="container mx-auto">
-      <div className="border border-slate-700 rounded-3xl mx-4 my-8">
+      <div className="border border-slate-700 rounded-3xl my-8 mx-4">
         <div className="footer text-base-content p-6">
           <nav>
             <h6 className="font-semibold text-white text-lg">Services</h6>
@@ -18,8 +18,8 @@ const Footer = () => {
             <h6 className="font-semibold text-white text-lg">Company</h6>
             <a className="link link-hover">About us</a>
             <a className="link link-hover">Services</a>
-            <a className="link link-hover">Help</a>
             <a className="link link-hover">Contact us</a>
+            <a className="link link-hover">Help</a>
           </nav>
           <nav>
             <h6 className="font-semibold text-white text-lg">Legal</h6>
