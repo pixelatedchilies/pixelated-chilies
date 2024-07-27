@@ -11,8 +11,8 @@ export default function Home() {
         </h2>
         <p className="my-4 font-light md:w-3/6">
           Embracing innovation and cutting-edge technology, we pioneer the
-          development and construction of the digital future, shaping tomorrow's
-          landscape with creativity and vision.
+          development and construction of the digital future, shaping
+          tomorrow&apos;s landscape with creativity and vision.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {services.map(({ id, title, description, src }) => (
