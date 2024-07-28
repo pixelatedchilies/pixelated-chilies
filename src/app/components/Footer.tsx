@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="container mx-auto">
-      <div className="border border-slate-700 rounded-3xl my-8 mx-4">
+    <footer className="container">
+      <div className="border border-slate-700 rounded-3xl my-8">
         <div className="footer text-base-content p-6">
           <nav>
             <h6 className="font-normal text-white text-lg">Services</h6>
