@@ -72,7 +72,7 @@ const FlippingCart: React.FC<FlippingCardProps> = ({
               />
             )}
             <button
-              className="btn btn-primary font-normal"
+              className="btn btn-sm btn-primary font-normal"
               onClick={handleButtonClick}
             >
               Get Started

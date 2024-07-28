@@ -55,3 +55,27 @@ body {
   background: transparent;
   transform: rotateY(180deg);
 }
+
+.fullscreen-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #191e25;
+  z-index: 9999;
+  transition: opacity 1s ease-out; /* Fade-out transition */
+}
+
+/* SVG item styling */
+.item {
+  width: 50%;
+  overflow: visible;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
