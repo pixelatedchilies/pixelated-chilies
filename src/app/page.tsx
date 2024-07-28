@@ -35,22 +35,24 @@ export default function Home() {
           <div className="md:w-3/6 flex flex-col gap-2">
             <div className="collapse collapse-arrow border border-slate-700 hover:bg-base-200 transition duration-300">
               <input type="radio" name="my-accordion-2" defaultChecked />
-              <div className="collapse-title text-xl text-white font-medium">
+              <h2 className="collapse-title text-lg text-white font-normal">
                 01. Endless Possibilities
-              </div>
+              </h2>
               <div className="collapse-content">
-                <p>
+                <p className="font-light">
                   Unlock endless possibilities with Pixelated Chilies. As a
                   dynamic digital solutions provider, we specialize in a diverse
                   range of services tailored to elevate your online presence.
                 </p>
-                <p>
+                <br />
+                <p className="font-light">
                   From captivating web design and development to seamless
                   e-commerce solutions, strategic social media management, and
                   impactful branding initiatives, we empower businesses to
                   thrive in the digital landscape.
                 </p>
-                <p>
+                <br />
+                <p className="font-light">
                   Dive into our expertise, including crafting engaging funnels,
                   optimizing conversion flows, and beyond. With Pixelated
                   Chilies, the potential for your online success knows no
@@ -60,20 +62,22 @@ export default function Home() {
             </div>
             <div className="collapse collapse-arrow border border-slate-700 hover:bg-base-200 transition duration-300">
               <input type="radio" name="my-accordion-2" />
-              <div className="collapse-title text-xl text-white font-medium">
+              <h2 className="collapse-title text-lg text-white font-normal">
                 02. Process Optimization
-              </div>
+              </h2>
               <div className="collapse-content">
-                <p>
+                <p className="font-light">
                   We&apos;re all about igniting growth and shaking up how
                   companies do digital marketing.
                 </p>
-                <p>
+                <br />
+                <p className="font-light">
                   We kick things off with strategic planning that sets the stage
                   for killer campaigns blending everything from spicy social
                   media to fiery content.
                 </p>
-                <p>
+                <br />
+                <p className="font-light">
                   Our data-driven insights keep things cooking, making sure your
                   marketing stays hot and fresh.
                 </p>
@@ -82,18 +86,21 @@ export default function Home() {
             </div>
             <div className="collapse collapse-arrow border border-slate-700 hover:bg-base-200 transition duration-300">
               <input type="radio" name="my-accordion-2" />
-              <div className="collapse-title text-xl text-white font-medium">
+              <h2 className="collapse-title text-lg text-white font-normal">
                 03. Ongoing Support
-              </div>
+              </h2>
               <div className="collapse-content">
-                <p>
+                <p className="font-light">
                   Our support doesn&apos;t end when your campaign goes live.
                 </p>
                 <p>
                   We&apos;re here for you every step of the way, ensuring your
                   success remains steady.
                 </p>
-                <p>Let&apos;s keep the momentum going together!</p>
+                <br />
+                <p className="font-light">
+                  Let&apos;s keep the momentum going together!
+                </p>
               </div>
             </div>
           </div>
