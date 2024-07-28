@@ -4,9 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.container {
+  margin: 0 auto;
+}
+
 @media (min-width: 1536px) {
   .container {
     max-width: 1280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
   }
 }
 
