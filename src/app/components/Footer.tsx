@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       <div className="border border-slate-700 rounded-3xl my-8 mx-4">
         <div className="footer text-base-content p-6">
           <nav>
-            <h6 className="font-semibold text-white text-lg">Services</h6>
+            <h6 className="font-normal text-white text-lg">Services</h6>
             <a className="link link-hover">Web Design & Development</a>
             <a className="link link-hover">E-Commerce Shop</a>
             <a className="link link-hover">Social Media Management</a>
@@ -15,14 +16,30 @@ const Footer = () => {
             <a className="link link-hover">Social Recruiting</a>
           </nav>
           <nav>
-            <h6 className="font-semibold text-white text-lg">Company</h6>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Services</a>
+            <h6 className="font-normal text-white text-lg">Company</h6>
+            <Link className="link link-hover" href="/about-us">
+              About us
+            </Link>
+            <a className="link link-hover">Our services</a>
             <a className="link link-hover">Contact us</a>
-            <a className="link link-hover">Help</a>
+            <a
+              className="link link-hover"
+              href="https://help.pixelatedchilies.com"
+            >
+              Help
+            </a>
+            <a
+              className="link link-hover"
+              href="mailto: info@pixelatedchilies.com"
+            >
+              info@pixelatedchilies.com
+            </a>
+            <a className="link link-hover" href="tel: +38345820089">
+              +383 45 820 089
+            </a>
           </nav>
           <nav>
-            <h6 className="font-semibold text-white text-lg">Legal</h6>
+            <h6 className="font-normal text-white text-lg">Legal</h6>
             <a className="link link-hover">Terms of use</a>
             <a className="link link-hover">Privacy policy</a>
             <a className="link link-hover">Imprint</a>
