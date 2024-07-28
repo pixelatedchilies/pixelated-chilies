@@ -79,3 +79,13 @@ body {
   stroke-linejoin: round;
   stroke-linecap: round;
 }
+
+h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+p {
+  font-weight: 300;
+}
