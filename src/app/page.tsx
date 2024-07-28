@@ -1,9 +1,11 @@
 import { services } from "./constants/services";
 import FlippingCart from "./ui/FlippingCard";
+import Loader from "./ui/Loader";
 
 export default function Home() {
   return (
     <>
+      <Loader />
       <main className="container mx-auto my-4 px-4">
         <h2 className="text-white font-semibold text-2xl md:text-3xl">
           We develop & build <br />
