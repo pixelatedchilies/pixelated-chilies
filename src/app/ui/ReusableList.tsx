@@ -10,7 +10,7 @@ export interface ReusableListProps {
 
 const ReusableList: React.FC<ReusableListProps> = ({ items }) => {
   return (
-    <ul>
+    <ul className="pl-4">
       {items.map((item, index) => (
         <li key={index} className="flex items-center">
           <svg
@@ -25,7 +25,7 @@ const ReusableList: React.FC<ReusableListProps> = ({ items }) => {
               clipRule="evenodd"
             />
           </svg>
-          <p className="p-1">{item.text}</p>
+          <p className="p-[2px]">{item.text}</p>
         </li>
       ))}
     </ul>

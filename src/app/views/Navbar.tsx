@@ -17,20 +17,11 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 right-0 left-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 border-b border-slate-900/10 dark:border-slate-50/[0.06]">
-      <nav className="container mx-auto navbar">
-        <div className="navbar-start w-full md:w-3/6 pl-4 md:pl-0 flex justify-between">
-          <Link href="/">
-            <Image
-              src={"/pixelated-chilies-logo.svg"}
-              width={150}
-              height={55}
-              alt="Pixelated Chilies logo"
-              className="w-[8rem] h-14 md:w-[150px] md:h-[55px]"
-            />
-          </Link>
+      <nav className="container mx-auto navbar px-0">
+        <div className="navbar-start w-full md:w-3/6 flex">
           <div className="drawer lg:hidden w-auto">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content pr-4">
+            <div className="drawer-content pr-2 pt-1">
               {/* Page content here */}
               <label
                 htmlFor="my-drawer"
@@ -50,7 +41,6 @@ const Navbar = () => {
                     d="M4 6h16M4 12h16M4 18h7"
                   />
                 </svg>
-                Menu
               </label>
             </div>
             <div className="drawer-side">
@@ -64,10 +54,9 @@ const Navbar = () => {
                   <Link href={"/"}>
                     <Image
                       src={"/pixelated-chilies-logo.svg"}
-                      width={150}
-                      height={55}
+                      width={170}
+                      height={25}
                       alt="Pixelated Chilies logo"
-                      className="w-[8rem] h-14 md:w-[150px] md:h-[55px]"
                     />
                   </Link>
                 </li>
@@ -84,6 +73,14 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
+          <Link href="/">
+            <Image
+              src={"/pixelated-chilies-logo.svg"}
+              width={170}
+              height={25}
+              alt="Pixelated Chilies logo"
+            />
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -96,9 +93,9 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="navbar-end hidden md:flex">
+        <div className="navbar-end flex">
           <a
-            className="btn btn-primary btn-sm font-normal"
+            className="btn bg-white text-black hover:bg-primary btn-sm font-normal border-none"
             href="https://help.pixelatedchilies.com"
           >
             Free consultation
