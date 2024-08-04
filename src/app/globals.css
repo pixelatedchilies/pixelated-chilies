@@ -99,3 +99,34 @@ h2 {
 p {
   font-weight: 300;
 }
+
+/* Add this to your global CSS or a CSS module */
+@keyframes gradientReveal {
+  0% {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: none;
+    -webkit-text-fill-color: white; /* Change to your desired solid color */
+  }
+}
+
+.gradient-reveal-text {
+  display: inline-block;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background-size: 200% 100%;
+  animation: gradientReveal 2s ease-in-out forwards; /* Adjust duration and easing */
+}
