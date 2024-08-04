@@ -3,17 +3,17 @@ import Image from "next/image";
 import ReusableList, { ListItem } from "../ui/ReusableList";
 
 interface HeroSectionProps {
+  listItems: ListItem[];
   reverseContent?: boolean;
   imageUrl: string;
   title: string;
-  listItems: ListItem[];
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
+  listItems,
   reverseContent,
   imageUrl,
   title,
-  listItems,
 }) => (
   <div className="hero bg-base-200 py-4">
     <div
