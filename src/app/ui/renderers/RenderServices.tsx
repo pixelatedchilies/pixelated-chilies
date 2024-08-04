@@ -8,7 +8,7 @@ interface RenderServicesProps {
 
 const RenderServices: React.FC<RenderServicesProps> = ({ services }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
       {services.map(
         ({ id, title, description, src, tools, toolsImageProps }) => (
           <FlippingCart

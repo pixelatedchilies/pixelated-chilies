@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
+import { motion, Variants, useInView } from "framer-motion";
 
 interface FlippingCardProps {
   src: string;
@@ -14,7 +15,25 @@ interface FlippingCardProps {
   };
 }
 
-const FlippingCart: React.FC<FlippingCardProps> = ({
+// Define the animation variants for fade-in-up effect
+const fadeInUpVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.5,
+      type: "spring",
+      stiffness: 150,
+      damping: 15,
+    },
+  },
+};
+
+const FlippingCard: React.FC<FlippingCardProps> = ({
   src,
   title,
   description,
@@ -22,6 +41,12 @@ const FlippingCart: React.FC<FlippingCardProps> = ({
   toolsImageProps,
 }) => {
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
 
   const handleClick = () => {
     setIsFlipped(!isFlipped);
@@ -32,7 +57,13 @@ const FlippingCart: React.FC<FlippingCardProps> = ({
   };
 
   return (
-    <div className="relative perspective">
+    <motion.div
+      ref={ref}
+      className="relative perspective"
+      variants={fadeInUpVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+    >
       <div
         className={`flip-card ${isFlipped ? "flipped" : ""}`}
         onClick={handleClick}
@@ -66,9 +97,9 @@ const FlippingCart: React.FC<FlippingCardProps> = ({
             {toolsImageProps && (
               <Image
                 src={tools}
-                width={toolsImageProps?.width || 200}
-                height={toolsImageProps?.height || 31}
-                alt="Flip card arrow icon"
+                width={toolsImageProps.width}
+                height={toolsImageProps.height}
+                alt="Tools icon"
               />
             )}
             <button
@@ -80,8 +111,8 @@ const FlippingCart: React.FC<FlippingCardProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
-export default FlippingCart;
+export default FlippingCard;
