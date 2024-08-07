@@ -14,6 +14,7 @@ export const schedulingList: ListItem[] = [
 ];
 
 export const paymentList: ListItem[] = [
+  { text: "Payment Gateways" },
   { text: "Security and credibility" },
   { text: "Multi-Currency support" },
   { text: "Increase conversions" },
@@ -23,7 +24,6 @@ export const paymentList: ListItem[] = [
 ];
 
 export const productShowcaseList: ListItem[] = [
-  { text: "Payment Gateways" },
   { text: "Reach wider audience" },
   { text: "Comprehensive catalog" },
   { text: "Faster purchases" },
