@@ -15,7 +15,6 @@ interface FlippingCardProps {
   };
 }
 
-// Define the animation variants for fade-in-up effect
 const fadeInUpVariants: Variants = {
   hidden: {
     opacity: 0,
@@ -71,7 +70,7 @@ const FlippingCard: React.FC<FlippingCardProps> = ({
       >
         <div className="flip-card-inner">
           {/* Front Side */}
-          <div className="flip-card-front flex flex-col gap-4 justify-center items-center py-20 px-6 border-[0.5px] border-slate-700 rounded-3xl hover:border-white transition duration-300">
+          <div className="flip-card-front flex flex-col gap-4 justify-center items-center py-20 px-6 border border-slate-900/10 dark:border-slate-50/[0.06] rounded-3xl hover:border-white hover:border-[0.5px] transition duration-300">
             <Image
               className="relative"
               src={src}
@@ -91,7 +90,7 @@ const FlippingCard: React.FC<FlippingCardProps> = ({
             />
           </div>
           {/* Back Side */}
-          <div className="flip-card-back flex flex-col gap-4 justify-center items-center py-20 px-6 border-[0.5px] border-slate-700 rounded-3xl hover:border-white transition duration-300">
+          <div className="flip-card-back flex flex-col gap-4 justify-center items-center py-20 px-6 border border-slate-900/10 dark:border-slate-50/[0.06] rounded-3xl hover:border-white hover:border-[0.5px] transition duration-300">
             <h2 className="text-lg text-white font-normal text-center">
               {description}
             </h2>

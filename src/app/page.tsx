@@ -11,8 +11,6 @@ import VideoSection from "./components/Video";
 import RenderServices from "./ui/renderers/RenderServices";
 import Loader from "./ui/Loader";
 import Accordion from "./components/Accordion";
-import Timeline from "./components/Timeline";
-import { timelineItems } from "./constants/timelineItems";
 
 export default function Home() {
   return (
@@ -24,7 +22,7 @@ export default function Home() {
             title="We develop & build Digital Future"
             description="Embracing innovation and cutting-edge technology, we pioneer the
           tomorrow&#39;s landscape with creativity and vision."
-            alignment="center"
+            alignment="left"
           />
         </section>
         <section className="container">
