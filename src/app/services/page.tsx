@@ -18,15 +18,7 @@ const Services: React.FC = () => {
       <section className="container mx-auto my-4">
         <section className="relative overflow-hidden my-16 py-24 md:py-60">
           {/* Video Background */}
-          <video
-            src="https://res.cloudinary.com/dc10qw88i/video/upload/v1715794154/about-us-video-banner_ewewjh.mp4"
-            autoPlay
-            loop
-            muted
-            className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-            controls={false}
-            playsInline
-          ></video>
+          <VideoSection src="https://res.cloudinary.com/dc10qw88i/video/upload/v1715794154/about-us-video-banner_ewewjh.mp4" />
 
           {/* Content Section */}
           <div className="relative z-10 flex items-center justify-center h-full">
