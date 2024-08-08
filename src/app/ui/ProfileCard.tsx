@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, Variants, useInView } from "framer-motion";
 
@@ -48,7 +48,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      <div className="card bg-base-100 w-full shadow-2xl rounded-lg">
+      <div className="card bg-gradient-to-tr from-[#000000] via-[#001116] to-[#000000] shadow-xl rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-500 ease-out">
         <figure className="overflow-hidden">
           <Image
             src={src}

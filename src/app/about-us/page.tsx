@@ -28,7 +28,7 @@ const AboutUs = () => {
       <section className="pb-24">
         <AnimatedTextSection
           sections={sectionsData}
-          classNames="bg-gradient-to-br from-[#08cedc1f]"
+          classNames="bg-gradient-to-tr from-[#000000] via-[#001116] to-[#000000]"
         />
       </section>
       <section className="mb-8">
