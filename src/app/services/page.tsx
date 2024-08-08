@@ -24,6 +24,8 @@ const Services: React.FC = () => {
             loop
             muted
             className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+            controls={false}
+            playsInline
           ></video>
 
           {/* Content Section */}
