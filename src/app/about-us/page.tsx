@@ -1,13 +1,26 @@
 import React from "react";
 import ProfileCard from "../ui/ProfileCard";
+import ContentSection from "../components/ContentSection";
+import AnimatedTextSection from "../components/AnimatedSection";
+import { sectionsData } from "../constants/about-section-data";
 
 const AboutUs = () => {
   return (
-    <main className="container mx-auto my-4 px-4">
-      <h2 className="text-white font-semibold text-2xl md:text-3xl my-8 text-center">
-        Meet the visionary team
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <main className="container mx-auto my-4">
+      <section className="py-8">
+        <ContentSection
+          title="About Us"
+          description="Dedicated to crafting dynamic and innovative digital solutions. Specializing in custom web development, we blend cutting-edge technology with creative design to deliver websites that are not only visually stunning but also highly functional."
+          alignment="center"
+        />
+      </section>
+      <section className="mb-4">
+        <AnimatedTextSection sections={sectionsData} />
+      </section>
+      <section className="my-8">
+        <ContentSection title="Meet the visionary team" alignment="center" />
+      </section>
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <ProfileCard
           src={
             "https://pixelatedchilies.com/wp-content/uploads/2024/05/Gent-Gllareva.png"
@@ -29,7 +42,7 @@ const AboutUs = () => {
           title={"Plator Gllareva"}
           description={"Co-Founder 🚀"}
         />
-      </div>
+      </section>
     </main>
   );
 };
