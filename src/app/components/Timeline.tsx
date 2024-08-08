@@ -64,7 +64,7 @@ const TimelineItemComponent: React.FC<TimelineItemComponentProps> = ({
     >
       {index % 2 === 0 ? (
         <>
-          <div className="timeline-start timeline-box">
+          <div className="timeline-start timeline-box rounded-xl">
             <h3 className="text-base font-semibold text-white">{item.title}</h3>
             <p className="text-sm">{item.description}</p>
           </div>
@@ -73,7 +73,7 @@ const TimelineItemComponent: React.FC<TimelineItemComponentProps> = ({
       ) : (
         <>
           <hr />
-          <div className="timeline-end timeline-box">
+          <div className="timeline-end timeline-box rounded-xl">
             <h3 className="text-base font-semibold text-white">{item.title}</h3>
             <p className="text-sm">{item.description}</p>
           </div>

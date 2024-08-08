@@ -16,7 +16,7 @@ const Services: React.FC = () => {
   return (
     <main>
       <section className="container mx-auto my-4">
-        <section className="relative overflow-hidden py-28 md:py-60">
+        <section className="relative overflow-hidden my-16 py-24 md:py-60">
           {/* Video Background */}
           <video
             src="https://res.cloudinary.com/dc10qw88i/video/upload/v1715794154/about-us-video-banner_ewewjh.mp4"
@@ -30,17 +30,11 @@ const Services: React.FC = () => {
 
           {/* Content Section */}
           <div className="relative z-10 flex items-center justify-center h-full">
-            <div className="text-center max-w-2xl mx-auto">
-              <h1 className="text-4xl font-bold text-white mb-4">
-                Our services
-              </h1>
-              <p className="text-lg text-white">
-                Dedicated to crafting dynamic and innovative digital solutions.
-                Specializing in custom web development, we blend cutting-edge
-                technology with creative design to deliver websites that are not
-                only visually stunning but also highly functional.
-              </p>
-            </div>
+            <ContentSection
+              title="Our services"
+              description="We specialize in crafting stunning websites and effective e-commerce platforms, managing your social media presence, and designing compelling brand identities. Our interactive funnels optimize customer journeys, while our social recruiting strategies help you attract top talent."
+              alignment="center"
+            />
           </div>
         </section>
       </section>

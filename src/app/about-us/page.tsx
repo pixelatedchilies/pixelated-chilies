@@ -7,30 +7,31 @@ import { sectionsData } from "../constants/about-section-data";
 const AboutUs = () => {
   return (
     <main className="container mx-auto my-4">
-      <section className="relative overflow-hidden py-28 md:py-60">
-        {/* Video Background */}
-        <video
-          src="https://res.cloudinary.com/dc10qw88i/video/upload/v1715794154/about-us-video-banner_ewewjh.mp4"
-          autoPlay
-          loop
-          muted
-          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-          controls={false}
-          playsInline
-        ></video>
+      <section className="container mx-auto my-4">
+        <section className="relative overflow-hidden my-16 py-24 md:py-60">
+          {/* Video Background */}
+          <video
+            src="https://res.cloudinary.com/dc10qw88i/video/upload/v1715794154/about-us-video-banner_ewewjh.mp4"
+            autoPlay
+            loop
+            muted
+            className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+            controls={false}
+            playsInline
+          ></video>
 
-        {/* Content Section */}
-        <div className="relative z-10 flex items-center justify-center h-full">
-          <div className="text-center max-w-2xl mx-auto">
-            <h1 className="text-4xl font-bold text-white mb-4">About Us</h1>
-            <p className="text-lg text-white">
-              Dedicated to crafting dynamic and innovative digital solutions.
-              Specializing in custom web development, we blend cutting-edge
-              technology with creative design to deliver websites that are not
-              only visually stunning but also highly functional.
-            </p>
+          {/* Content Section */}
+          <div className="relative z-10 flex items-center justify-center h-full">
+            <ContentSection
+              title="About Us"
+              description="Dedicated to crafting dynamic and innovative digital solutions.
+                Specializing in custom web development, we blend cutting-edge
+                technology with creative design to deliver websites that are not
+                only visually stunning but also highly functional."
+              alignment="center"
+            />
           </div>
-        </div>
+        </section>
       </section>
       <section className="pb-24">
         <AnimatedTextSection
