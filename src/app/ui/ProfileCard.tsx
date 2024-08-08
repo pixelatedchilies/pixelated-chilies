@@ -48,7 +48,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      <div className="card bg-base-100 w-full shadow-2xl">
+      <div className="card bg-base-100 w-full shadow-2xl rounded-lg">
         <figure className="overflow-hidden">
           <Image
             src={src}
