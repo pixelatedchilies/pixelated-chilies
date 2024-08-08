@@ -15,7 +15,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => (
     {items.map((item) => (
       <div
         key={item.id}
-        className="collapse collapse-arrow border border-slate-700 hover:bg-base-200 transition duration-300"
+        className="collapse collapse-arrow border border-slate-700 hover:bg-base-200 transition duration-300 rounded-xl"
       >
         <input type="radio" name="my-accordion" id={item.id} />
         <label

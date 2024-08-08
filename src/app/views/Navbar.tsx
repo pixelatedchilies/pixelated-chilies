@@ -95,7 +95,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end flex">
           <a
-            className="btn bg-white text-black hover:bg-primary btn-sm font-normal border-none"
+            className="btn bg-white text-black hover:bg-primary btn-sm font-normal border-none rounded-lg"
             href="https://help.pixelatedchilies.com"
           >
             Free consultation

@@ -24,12 +24,10 @@ const ContentSection: React.FC<ContentSectionProps> = ({
     <section className={`container ${className}`}>
       <div className={`${alignmentClasses[alignment]}`}>
         <MotionText delay={0}>
-          <h2 className="text-white font-semibold text-2xl md:text-3xl">
-            {title}
-          </h2>
+          <h2 className="text-white font-semibold text-3xl mb-2">{title}</h2>
         </MotionText>
         <MotionText delay={0.3}>
-          <p className="text-white">{description}</p>
+          <p className="text-white font-light">{description}</p>
         </MotionText>
       </div>
     </section>
