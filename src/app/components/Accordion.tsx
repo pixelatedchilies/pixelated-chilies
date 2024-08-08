@@ -15,13 +15,10 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => (
     {items.map((item) => (
       <div
         key={item.id}
-        className="collapse collapse-arrow border border-slate-700 hover:bg-base-200 transition duration-300 rounded-xl"
+        className="collapse collapse-arrow border border-slate-900/10 dark:border-slate-50/[0.06] rounded-xl bg-gradient-to-br from-[#001116]"
       >
-        <input type="radio" name="my-accordion" id={item.id} />
-        <label
-          htmlFor={item.id}
-          className="collapse-title text-lg text-white font-normal"
-        >
+        <input type="checkbox" id={item.id} />
+        <label htmlFor={item.id} className="collapse-title text-xl font-medium">
           {item.title}
         </label>
         <div className="collapse-content">

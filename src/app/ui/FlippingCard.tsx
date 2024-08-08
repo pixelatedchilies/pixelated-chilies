@@ -65,7 +65,7 @@ const FlippingCard: React.FC<FlippingCardProps> = ({
       animate={isInView ? "visible" : "hidden"}
     >
       <div
-        className={`flip-card bg-gradient-to-br from-[#08cedc1f] rounded-3xl ${
+        className={`flip-card bg-gradient-to-br from-[#001116] rounded-3xl ${
           isFlipped ? "flipped" : ""
         }`}
         onClick={handleClick}
