@@ -55,9 +55,22 @@ export default function Home() {
           />
         </section>
         <section className="container">
-          <div className="flex flex-row-reverse flex-wrap my-12 gap-1">
-            <div className="md:w-3/6 bg-white rounded-3xl"></div>
-            <div className="md:w-3/6 flex flex-col gap-2">
+          <div className="flex flex-row items-center flex-wrap md:flex-nowrap my-12 gap-1">
+            <div className="w-full md:w-3/6 rounded-3xl h-[200px] md:h-[400px]">
+              <video
+                className="w-full h-full object-cover"
+                src={
+                  "https://res.cloudinary.com/dc10qw88i/video/upload/v1713270728/pixelatedchilies-marketing-video_okwsvi.mp4"
+                }
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls={false}
+              />
+            </div>
+            <div className="w-full md:w-3/6 flex flex-col gap-2">
+              <ContentSection title="Grow and prosper" alignment="left" />
               <Accordion items={accordionItems} />
             </div>
           </div>
