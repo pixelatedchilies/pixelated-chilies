@@ -8,6 +8,7 @@ interface AnimatedTextSectionProps {
     title: string;
     paragraphs: string[];
   }[];
+  classNames?: string;
 }
 
 const sectionVariants: Variants = {
@@ -32,6 +33,7 @@ const containerVariants: Variants = {
 
 const AnimatedTextSection: React.FC<AnimatedTextSectionProps> = ({
   sections,
+  classNames,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -41,12 +43,12 @@ const AnimatedTextSection: React.FC<AnimatedTextSectionProps> = ({
   });
 
   return (
-    <section className="flex flex-col md:flex-row gap-4 w-full">
+    <section className={`flex flex-col md:flex-row gap-4 w-full`}>
       {sections.map((section, index) => (
         <motion.div
           ref={ref}
           key={index}
-          className="p-4 md:p-8 w-full md:w-1/2 rounded-lg shadow-xl border border-slate-900/10 dark:border-slate-50/[0.06]"
+          className={`p-4 md:p-8 w-full md:w-1/2 rounded-lg shadow-xl border border-slate-900/10 dark:border-slate-50/[0.06] ${classNames}`}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={sectionVariants}

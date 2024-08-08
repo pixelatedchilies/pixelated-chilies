@@ -15,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   imageUrl,
   title,
 }) => (
-  <div className="hero bg-base-200 py-4">
+  <div className="hero py-4">
     <div
       className={`hero-content flex flex-col ${
         reverseContent ? "md:flex-row-reverse" : "md:flex-row"
