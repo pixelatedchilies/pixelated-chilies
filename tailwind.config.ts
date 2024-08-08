@@ -23,8 +23,8 @@ const config: Config = {
   daisyui: {
     themes: [
       {
-        dark: {
-          ...require("daisyui/src/theming/themes")["dark"],
+        black: {
+          ...require("daisyui/src/theming/themes")["black"],
           primary: "#08CEDC",
         },
       },
