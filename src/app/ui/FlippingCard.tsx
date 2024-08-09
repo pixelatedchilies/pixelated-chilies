@@ -105,7 +105,7 @@ const FlippingCard: React.FC<FlippingCardProps> = ({
               />
             )}
             <button
-              className="btn btn-sm btn-primary font-normal"
+              className="btn btn-sm btn-primary font-normal rounded-lg"
               onClick={handleButtonClick}
             >
               Get Started

@@ -11,6 +11,7 @@ import VideoSection from "./components/Video";
 import RenderServices from "./ui/renderers/RenderServices";
 import Loader from "./ui/Loader";
 import Accordion from "./components/Accordion";
+import HeyflowWidget from "./components/HeyflowWidget";
 
 export default function Home() {
   return (
@@ -25,7 +26,9 @@ export default function Home() {
             <div className="relative z-10 flex items-center justify-center h-full md:w-2/3 mx-auto">
               <ContentSection
                 title="Your digital marketing agency for growth"
+                description="Dedicated to launch grow and elevate your brand's success"
                 alignment="center"
+                button="Discover your growth plan"
               />
             </div>
           </section>
@@ -39,7 +42,12 @@ export default function Home() {
           />
           <RenderServices services={services} />
         </section>
-        <section className="w-full h-[300px] md:h-[1080px] relative">
+        <section id="services" className="py-20 md:py-28">
+          <section className="container">
+            <HeyflowWidget />
+          </section>
+        </section>
+        <section className="w-full h-[300px] md:h-[700px] relative mt-12">
           <VideoSection src="https://res.cloudinary.com/dc10qw88i/video/upload/v1719947082/trio-salon-website-video-banner_xclrv1.mp4" />
         </section>
         <section className="container">
