@@ -45,7 +45,7 @@ export default function Home() {
           <RenderServices services={services} />
         </section>
         <section id="services" className="py-20 md:py-28">
-          <section className="container">
+          <section>
             <HeyflowWidget />
           </section>
         </section>
