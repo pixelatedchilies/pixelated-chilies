@@ -16,12 +16,12 @@ const Services: React.FC = () => {
   return (
     <main>
       <section className="container mx-auto my-4">
-        <section className="relative overflow-hidden my-24 py-24 md:py-60">
+        <section className="relative overflow-hidden my-28 py-32 md:py-60">
           {/* Video Background */}
           <VideoSection src="https://res.cloudinary.com/dc10qw88i/video/upload/v1715794154/about-us-video-banner_ewewjh.mp4" />
 
           {/* Content Section */}
-          <div className="relative z-10 flex items-center justify-center h-full">
+          <div className="relative z-10 flex items-center justify-center h-full md:w-2/3 mx-auto">
             <ContentSection
               title="Our services"
               description="We specialize in crafting stunning websites and effective e-commerce platforms, managing your social media presence, and designing compelling brand identities. Our interactive funnels optimize customer journeys, while our social recruiting strategies help you attract top talent."

@@ -86,7 +86,10 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">
             {menuLinks.map(({ id, href, title }) => (
               <li key={id}>
-                <Link href={href} className="text-base text-white font-normal">
+                <Link
+                  href={href}
+                  className="text-base text-white font-normal rounded-xl"
+                >
                   {title}
                 </Link>
               </li>
