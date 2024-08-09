@@ -1,5 +1,6 @@
 import React from "react";
 import MotionText from "../ui/MotionText";
+import Link from "next/link";
 
 interface ContentSectionProps {
   title: string;
@@ -33,12 +34,12 @@ const ContentSection: React.FC<ContentSectionProps> = ({
         </MotionText>
         {button && (
           <MotionText delay={0.6}>
-            <a
+            <Link
               className="btn btn-sm btn-primary rounded-lg font-normal mt-4"
               href="#services"
             >
               {button}
-            </a>
+            </Link>
           </MotionText>
         )}
       </div>
