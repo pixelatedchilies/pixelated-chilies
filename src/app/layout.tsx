@@ -22,7 +22,7 @@ export default function RootLayout({
         <Footer />
         <Script
           src="https://static.heyflow.com/widget/latest/webview.js"
-          strategy="afterInteractive"
+          async
         />
       </body>
     </html>

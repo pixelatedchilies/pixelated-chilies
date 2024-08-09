@@ -6,6 +6,7 @@ interface ContentSectionProps {
   description?: string;
   alignment?: "left" | "center" | "right";
   className?: string;
+  button?: string;
 }
 
 const ContentSection: React.FC<ContentSectionProps> = ({
@@ -13,6 +14,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   description,
   alignment = "center",
   className = "",
+  button,
 }) => {
   const alignmentClasses = {
     left: "text-left",
@@ -29,6 +31,16 @@ const ContentSection: React.FC<ContentSectionProps> = ({
         <MotionText delay={0.3}>
           <p className="text-white font-light">{description}</p>
         </MotionText>
+        {button && (
+          <MotionText delay={0.6}>
+            <a
+              className="btn btn-sm btn-primary rounded-lg font-normal mt-4"
+              href="#services"
+            >
+              {button}
+            </a>
+          </MotionText>
+        )}
       </div>
     </section>
   );
