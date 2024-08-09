@@ -12,6 +12,7 @@ import RenderServices from "./ui/renderers/RenderServices";
 import Loader from "./ui/Loader";
 import Accordion from "./components/Accordion";
 import HeyflowWidget from "./components/HeyflowWidget";
+import MotionText from "./ui/MotionText";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <Loader />
       <main className="flex flex-col gap-4 md:gap-8">
         <section className="container mx-auto my-4">
-          <section className="relative overflow-hidden my-32 py-36 md:py-60">
+          <section className="relative overflow-hidden my-28 py-32 md:py-60">
             {/* Video Background */}
             <VideoSection src="https://res.cloudinary.com/dc10qw88i/video/upload/v1715794154/about-us-video-banner_ewewjh.mp4" />
             {/* Content Section */}
@@ -72,6 +73,27 @@ export default function Home() {
             title="Product Showcase"
             listItems={productShowcaseList}
           />
+        </section>
+        <section>
+          <div className="relative bg-[url('https://pixelatedchilies.com/wp-content/uploads/2024/07/Screenshot-2024-07-02-at-10.43.38-AM-scaled.webp')] h-96 w-full flex flex-col justify-center items-center">
+            <div className="absolute inset-0 bg-black opacity-50"></div>
+
+            <div className="relative z-10 flex flex-col justify-center items-center">
+              <MotionText delay={0}>
+                <h2 className="text-white font-semibold text-3xl mb-2 text-center">
+                  Ready to take your business to the next level?
+                </h2>
+              </MotionText>
+              <MotionText delay={0.3}>
+                <button className="bg-primary py-1 px-8 rounded-xl text-black text-xl font-medium my-0 flex flex-col">
+                  Get your quote
+                  <span className="w-full text-sm font-light">
+                    in less than 20 seconds
+                  </span>
+                </button>
+              </MotionText>
+            </div>
+          </div>
         </section>
         <section className="container">
           <div className="flex flex-row items-center flex-wrap md:flex-nowrap md:py-12 gap-1">

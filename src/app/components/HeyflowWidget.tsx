@@ -32,7 +32,6 @@ const HeyflowWidget = () => {
         <heyflow-wrapper
           flow-id="pixelated-chilies-form"
           dynamic-height
-          scroll-up-on-navigation
           style-config='{"width": "100%"}'
         ></heyflow-wrapper>
       )}

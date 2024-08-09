@@ -18,7 +18,10 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => (
         className="collapse collapse-arrow border border-slate-900/10 dark:border-slate-50/[0.06] rounded-xl"
       >
         <input type="checkbox" id={item.id} />
-        <label htmlFor={item.id} className="collapse-title text-lg font-normal">
+        <label
+          htmlFor={item.id}
+          className="collapse-title text-base font-normal text-white"
+        >
           {item.title}
         </label>
         <div className="collapse-content">
