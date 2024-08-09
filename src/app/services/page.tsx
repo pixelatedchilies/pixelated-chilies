@@ -16,7 +16,7 @@ const Services: React.FC = () => {
   return (
     <main>
       <section className="container mx-auto my-4">
-        <section className="relative overflow-hidden my-16 py-24 md:py-60">
+        <section className="relative overflow-hidden my-24 py-24 md:py-60">
           {/* Video Background */}
           <VideoSection src="https://res.cloudinary.com/dc10qw88i/video/upload/v1715794154/about-us-video-banner_ewewjh.mp4" />
 

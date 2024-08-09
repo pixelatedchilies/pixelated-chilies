@@ -3,12 +3,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, Variants, useInView } from "framer-motion";
-
-interface ProfileCardProps {
-  src: string;
-  title: string;
-  description: string;
-}
+import { TeamMember } from "../constants/team-members";
 
 const fadeInUpVariants: Variants = {
   hidden: {
@@ -28,11 +23,7 @@ const fadeInUpVariants: Variants = {
   },
 };
 
-const ProfileCard: React.FC<ProfileCardProps> = ({
-  src,
-  title,
-  description,
-}) => {
+const ProfileCard: React.FC<TeamMember> = ({ src, name, description }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const isInView = useInView(ref, {
@@ -52,14 +43,14 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
         <figure className="overflow-hidden">
           <Image
             src={src}
-            alt={title}
+            alt={`${name} profile image`}
             width={320}
             height={384}
             className="w-full h-96 object-cover object-top"
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title text-white">{title}</h2>
+          <h2 className="card-title text-white">{name}</h2>
           <p>{description}</p>
         </div>
       </div>

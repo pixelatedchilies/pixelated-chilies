@@ -16,27 +16,38 @@ export default function Home() {
   return (
     <>
       <Loader />
-      <main>
-        <section className="my-8">
+      <main className="flex flex-col gap-4 md:gap-8">
+        <section className="container mx-auto my-4">
+          <section className="relative overflow-hidden my-32 py-36 md:py-60">
+            {/* Video Background */}
+            <VideoSection src="https://res.cloudinary.com/dc10qw88i/video/upload/v1715794154/about-us-video-banner_ewewjh.mp4" />
+            {/* Content Section */}
+            <div className="relative z-10 flex items-center justify-center h-full md:w-2/3 mx-auto">
+              <ContentSection
+                title="Your digital marketing agency for growth"
+                alignment="center"
+              />
+            </div>
+          </section>
+        </section>
+        <section className="container flex flex-col gap-4">
           <ContentSection
             title="We develop & build Digital Future"
             description="Embracing innovation and cutting-edge technology, we pioneer the
           tomorrow&#39;s landscape with creativity and vision."
             alignment="left"
           />
-        </section>
-        <section className="container">
           <RenderServices services={services} />
         </section>
-        <section className="w-full h-[300px] md:h-[700px] relative mb-8">
+        <section className="w-full h-[300px] md:h-[1080px] relative">
           <VideoSection src="https://res.cloudinary.com/dc10qw88i/video/upload/v1719947082/trio-salon-website-video-banner_xclrv1.mp4" />
         </section>
-        <ContentSection
-          title="Crafting Pixel-Perfect Solutions"
-          description="Explore our dynamic creations below"
-          alignment="center"
-        />
-        <section className="my-8">
+        <section className="container">
+          <ContentSection
+            title="Crafting Pixel-Perfect Solutions"
+            description="Explore our dynamic creations below"
+            alignment="center"
+          />
           <HeroSection
             imageUrl="https://pixelatedchilies.com/wp-content/uploads/2024/07/Screenshot-2024-07-02-at-1.12.58-AM-scaled.webp"
             title="Powerful Scheduling"
@@ -55,7 +66,7 @@ export default function Home() {
           />
         </section>
         <section className="container">
-          <div className="flex flex-row items-center flex-wrap md:flex-nowrap my-12 gap-1">
+          <div className="flex flex-row items-center flex-wrap md:flex-nowrap md:py-12 gap-1">
             <div className="w-full md:w-3/6 rounded-3xl h-[200px] md:h-[400px]">
               <video
                 className="w-full h-full object-cover"
