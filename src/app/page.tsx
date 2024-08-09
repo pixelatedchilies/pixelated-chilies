@@ -74,7 +74,7 @@ export default function Home() {
             listItems={productShowcaseList}
           />
         </section>
-        <section>
+        <section className="hidden md:flex">
           <div className="relative bg-[url('https://pixelatedchilies.com/wp-content/uploads/2024/07/Screenshot-2024-07-02-at-10.43.38-AM-scaled.webp')] h-96 w-full flex flex-col justify-center items-center">
             <div className="absolute inset-0 bg-black opacity-50"></div>
 
