@@ -23,7 +23,7 @@ const textVariants: Variants = {
 
 const ReusableList: React.FC<ReusableListProps> = ({ items }) => {
   return (
-    <ul className="pl-4">
+    <ul>
       {items.map((item, index) => (
         <motion.li
           key={index}

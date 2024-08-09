@@ -4,16 +4,17 @@ import ContentSection from "../components/ContentSection";
 import AnimatedTextSection from "../components/AnimatedSection";
 import { sectionsData } from "../constants/about-section-data";
 import VideoSection from "../components/Video";
+import { TEAM_MEMBERS } from "../constants/team-members";
 
 const AboutUs = () => {
   return (
     <main className="container mx-auto my-4">
-      <section className="container mx-auto my-4">
-        <section className="relative overflow-hidden my-16 py-24 md:py-60">
+      <section>
+        <section className="relative overflow-hidden my-24 py-24 md:py-60">
           {/* Video Background */}
           <VideoSection src="https://res.cloudinary.com/dc10qw88i/video/upload/v1715794154/about-us-video-banner_ewewjh.mp4" />
           {/* Content Section */}
-          <div className="relative z-10 flex items-center justify-center h-full">
+          <div className="relative z-10 flex items-center justify-center h-full md:w-2/3 mx-auto">
             <ContentSection
               title="About Us"
               description="Dedicated to crafting dynamic and innovative digital solutions.
@@ -25,37 +26,25 @@ const AboutUs = () => {
           </div>
         </section>
       </section>
-      <section className="pb-24">
+      <section>
         <AnimatedTextSection
           sections={sectionsData}
           classNames="bg-gradient-to-tr from-[#000000] via-[#001116] to-[#000000]"
         />
       </section>
-      <section className="mb-8">
+      <section className="pb-4 pt-32">
         <ContentSection title="Meet the visionary team" alignment="center" />
       </section>
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <ProfileCard
-          src={
-            "https://pixelatedchilies.com/wp-content/uploads/2024/05/Gent-Gllareva.png"
-          }
-          title={"Gent Gllareva"}
-          description={"Co-Founder 🚀"}
-        />
-        <ProfileCard
-          src={
-            "https://pixelatedchilies.com/wp-content/uploads/2024/05/Valdrin-Nishori.jpg"
-          }
-          title={"Valdrin Nishori"}
-          description={"Co-Founder 🚀"}
-        />
-        <ProfileCard
-          src={
-            "https://pixelatedchilies.com/wp-content/uploads/2024/05/Plator-Gllareva-scaled.webp"
-          }
-          title={"Plator Gllareva"}
-          description={"Co-Founder 🚀"}
-        />
+        {TEAM_MEMBERS.map(({ id, src, name, description }) => (
+          <ProfileCard
+            key={id}
+            id={id}
+            src={src}
+            name={name}
+            description={description}
+          />
+        ))}
       </section>
     </main>
   );
