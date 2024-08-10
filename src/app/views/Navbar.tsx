@@ -49,7 +49,7 @@ const Navbar = () => {
                 aria-label="close sidebar"
                 className="drawer-overlay"
               ></label>
-              <ul className="menu bg-black text-base-content min-h-full w-80 p-4 flex flex-col gap-12">
+              <ul className="menu bg-gradient-to-tr from-[#000000] via-[#001116] to-[#000000] text-base-content min-h-full w-80 p-4 flex flex-col gap-12">
                 <li aria-label="close sidebar">
                   <Link href={"/"}>
                     <Image

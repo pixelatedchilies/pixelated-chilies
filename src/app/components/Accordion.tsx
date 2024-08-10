@@ -15,7 +15,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => (
     {items.map((item) => (
       <div
         key={item.id}
-        className="collapse collapse-arrow border border-slate-900/10 dark:border-slate-50/[0.06] rounded-xl"
+        className="collapse collapse-arrow bg-gradient-to-tr from-[#001116] border border-slate-900/10 dark:border-slate-50/[0.06] rounded-xl"
       >
         <input type="checkbox" id={item.id} />
         <label
@@ -26,7 +26,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => (
         </label>
         <div className="collapse-content">
           {item.content.map((paragraph, index) => (
-            <p key={index} className="text-base font-light">
+            <p key={index} className="text-base font-light mb-2">
               {paragraph}
             </p>
           ))}
