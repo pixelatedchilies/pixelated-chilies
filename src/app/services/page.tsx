@@ -12,7 +12,7 @@ import {
 import Timeline from "../components/Timeline";
 import { timelineItems } from "../constants/timelineItems";
 import QuoteSection from "../components/QuoteSection";
-import AnimatedTextSection from "../components/AnimatedSection";
+import AnimatedTextSection from "../components/AnimatedTextSection";
 import { whyChooseUsData } from "../constants/why-choose-us-section-data";
 
 const Services: React.FC = () => {
@@ -69,17 +69,21 @@ const Services: React.FC = () => {
       <section className="mt-16">
         <QuoteSection />
       </section>
-      <section className="bg-white py-12 px-4 lg:p-20 flex flex-col gap-4 md:gap-8">
-        <ContentSection
-          title="Why choose us?"
-          textColor="text-black"
-          className="flex md:justify-center"
-        />
-        <hr className="border-[0.5px] border-black" />
-        <AnimatedTextSection
-          sections={whyChooseUsData}
-          textColor="text-black"
-        />
+      <section className="container">
+        <section className="bg-white my-4 px-4 py-8 md:p-16 mt-8 rounded-lg">
+          <ContentSection
+            title="Why choose us?"
+            textColor="text-black"
+            className="flex md:justify-center"
+          />
+          <hr className="border-[0.5px] border-black" />
+          <section className="pt-8">
+            <AnimatedTextSection
+              sections={whyChooseUsData}
+              textColor="text-black"
+            />
+          </section>
+        </section>
       </section>
     </main>
   );

@@ -3,11 +3,10 @@
 import React from "react";
 import { motion, Variants, useInView } from "framer-motion";
 
-interface AnimatedTextSectionProps {
-  sections: {
-    title: string;
-    paragraphs: string[];
-  }[];
+interface AnimatedSectionProps {
+  title: string;
+  paragraphs: string[];
+  index: number;
   classNames?: string;
   textColor?: string;
 }
@@ -50,8 +49,10 @@ const containerVariants: Variants = {
   },
 };
 
-const AnimatedTextSection: React.FC<AnimatedTextSectionProps> = ({
-  sections,
+const AnimatedSection: React.FC<AnimatedSectionProps> = ({
+  title,
+  paragraphs,
+  index,
   classNames,
   textColor,
 }) => {
@@ -62,52 +63,45 @@ const AnimatedTextSection: React.FC<AnimatedTextSectionProps> = ({
   });
 
   return (
-    <section className={`flex flex-col md:flex-row gap-4 w-full`}>
-      {sections.map((section, index) => {
-        return (
-          <motion.div
-            ref={ref}
-            key={index}
-            className={`p-4 md:p-8 w-full md:w-1/2 rounded-2xl border border-slate-900/10 dark:border-slate-50/[0.06] ${classNames}`}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={sectionVariants}
-            transition={{ duration: 0.6, delay: index * 0.5, ease: "easeOut" }}
-            whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
-          >
-            <motion.div
-              className="flex flex-col"
-              variants={containerVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
+    <motion.div
+      ref={ref}
+      className={`w-full md:w-1/2 rounded-xl border border-slate-900/10 dark:border-slate-50/[0.06] ${classNames}`}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={sectionVariants}
+      transition={{ duration: 0.6, delay: index * 0.5, ease: "easeOut" }}
+      whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
+    >
+      <motion.div
+        className="flex flex-col"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
+        <motion.h1
+          className={`text-xl md:text-2xl ${
+            textColor ? textColor : "text-white"
+          } font-semibold mb-2`}
+          variants={headerVariants}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          {title}
+        </motion.h1>
+        <div className="flex flex-col">
+          {paragraphs.map((paragraph, pIndex) => (
+            <motion.p
+              key={pIndex}
+              className={`${textColor ? textColor : ""} text-base mb-2`}
+              variants={paragraphVariants}
+              transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <motion.h1
-                className={`text-xl md:text-2xl ${
-                  textColor ? textColor : "text-white"
-                } font-semibold mb-2`}
-                variants={headerVariants}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                {section.title}
-              </motion.h1>
-              <div className="flex flex-col">
-                {section.paragraphs.map((paragraph, pIndex) => (
-                  <motion.p
-                    key={pIndex}
-                    className={`${textColor ? textColor : ""} text-base mb-2`}
-                    variants={paragraphVariants}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                  >
-                    {paragraph}
-                  </motion.p>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
-        );
-      })}
-    </section>
+              {paragraph}
+            </motion.p>
+          ))}
+        </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
-export default AnimatedTextSection;
+export default AnimatedSection;

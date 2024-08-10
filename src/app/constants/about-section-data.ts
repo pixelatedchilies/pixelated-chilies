@@ -1,4 +1,9 @@
-export const sectionsData = [
+export interface SectionsData {
+  title: string;
+  paragraphs: string[];
+}
+
+export const sectionsData: SectionsData[] = [
   {
     title: "Mission",
     paragraphs: [
