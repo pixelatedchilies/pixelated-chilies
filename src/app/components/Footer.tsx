@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="container">
-      <div className="border border-slate-900/10 dark:border-slate-50/[0.06] rounded-3xl my-8">
+      <div className="bg-gradient-to-tr from-[#000000] via-[#001116] to-[#000000] border border-slate-900/10 dark:border-slate-50/[0.06] rounded-3xl my-8">
         <div className="footer text-base-content p-6">
           <nav>
             <h6 className="font-normal text-white text-lg">Services</h6>

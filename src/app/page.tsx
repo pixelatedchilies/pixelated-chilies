@@ -12,8 +12,6 @@ import RenderServices from "./ui/renderers/RenderServices";
 import Loader from "./ui/Loader";
 import Accordion from "./components/Accordion";
 import HeyflowWidget from "./components/HeyflowWidget";
-import MotionText from "./ui/MotionText";
-import Link from "next/link";
 import QuoteSection from "./components/QuoteSection";
 
 export default function Home() {
@@ -94,8 +92,11 @@ export default function Home() {
                 controls={false}
               />
             </div>
-            <div className="w-full md:w-3/6 flex flex-col gap-2">
-              <ContentSection title="Grow and prosper" alignment="left" />
+            <div className="w-full md:w-3/6 flex flex-col gap-2 my-4 md:my-0">
+              <ContentSection
+                title="Grow and prosper"
+                className="flex justify-center mb-4 md:justify-start"
+              />
               <Accordion items={accordionItems} />
             </div>
           </div>

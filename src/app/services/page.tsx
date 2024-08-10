@@ -69,11 +69,11 @@ const Services: React.FC = () => {
       <section className="mt-16">
         <QuoteSection />
       </section>
-      <section className="bg-white py-12 px-4 lg:p-20 flex flex-col gap-8">
+      <section className="bg-white py-12 px-4 lg:p-20 flex flex-col gap-4 md:gap-8">
         <ContentSection
           title="Why choose us?"
           textColor="text-black"
-          className="flex md:justify-center pl-4"
+          className="flex md:justify-center"
         />
         <hr className="border-[0.5px] border-black" />
         <AnimatedTextSection
