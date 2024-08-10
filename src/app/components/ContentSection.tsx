@@ -8,6 +8,7 @@ interface ContentSectionProps {
   alignment?: "left" | "center" | "right";
   className?: string;
   button?: string;
+  textColor?: string;
 }
 
 const ContentSection: React.FC<ContentSectionProps> = ({
@@ -16,6 +17,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   alignment = "center",
   className = "",
   button,
+  textColor,
 }) => {
   const alignmentClasses = {
     left: "text-left",
@@ -27,10 +29,18 @@ const ContentSection: React.FC<ContentSectionProps> = ({
     <section className={`${className}`}>
       <div className={`${alignmentClasses[alignment]}`}>
         <MotionText delay={0}>
-          <h2 className="text-white font-semibold text-3xl mb-2">{title}</h2>
+          <h2
+            className={`${
+              textColor ? textColor : "text-white"
+            } font-semibold text-3xl mb-2`}
+          >
+            {title}
+          </h2>
         </MotionText>
         <MotionText delay={0.3}>
-          <p className="text-white font-light">{description}</p>
+          <p className={`${textColor ? textColor : "text-white"} font-light`}>
+            {description}
+          </p>
         </MotionText>
         {button && (
           <MotionText delay={0.6}>

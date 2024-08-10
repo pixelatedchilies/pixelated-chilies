@@ -14,6 +14,7 @@ import Accordion from "./components/Accordion";
 import HeyflowWidget from "./components/HeyflowWidget";
 import MotionText from "./ui/MotionText";
 import Link from "next/link";
+import QuoteSection from "./components/QuoteSection";
 
 export default function Home() {
   return (
@@ -52,7 +53,7 @@ export default function Home() {
         <section className="w-full h-[300px] md:h-[700px] relative my-12">
           <VideoSection src="https://res.cloudinary.com/dc10qw88i/video/upload/v1719947082/trio-salon-website-video-banner_xclrv1.mp4" />
         </section>
-        <section className="container">
+        <section>
           <ContentSection
             title="Crafting Pixel-Perfect Solutions"
             description="Explore our dynamic creations below"
@@ -76,24 +77,7 @@ export default function Home() {
           />
         </section>
         <section className="mb-8 mt-4 md:mb-0 md:mt-20">
-          <div className="relative bg-[url('https://pixelatedchilies.com/wp-content/uploads/2024/07/Screenshot-2024-07-02-at-10.43.38-AM-scaled.webp')] bg-cover bg-center md:bg-top h-72 md:h-96 w-full flex flex-col justify-center items-center">
-            <div className="absolute inset-0 bg-black opacity-60"></div>
-            <div className="relative z-10 flex flex-col justify-center items-center">
-              <MotionText delay={0}>
-                <h2 className="text-white font-semibold text-2xl md:text-3xl mb-4 text-center">
-                  Ready to take your business to the next level?
-                </h2>
-              </MotionText>
-              <MotionText delay={0.3}>
-                <Link
-                  href="https://help.pixelatedchilies.com"
-                  className="btn btn-primary btn-sm font-normal rounded-lg"
-                >
-                  Get your quote
-                </Link>
-              </MotionText>
-            </div>
-          </div>
+          <QuoteSection />
         </section>
         <section className="container">
           <div className="flex flex-row items-center flex-wrap md:flex-nowrap md:py-12 gap-1">

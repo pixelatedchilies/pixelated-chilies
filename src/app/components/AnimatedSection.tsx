@@ -9,6 +9,7 @@ interface AnimatedTextSectionProps {
     paragraphs: string[];
   }[];
   classNames?: string;
+  textColor?: string;
 }
 
 const sectionVariants: Variants = {
@@ -52,6 +53,7 @@ const containerVariants: Variants = {
 const AnimatedTextSection: React.FC<AnimatedTextSectionProps> = ({
   sections,
   classNames,
+  textColor,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -66,7 +68,7 @@ const AnimatedTextSection: React.FC<AnimatedTextSectionProps> = ({
         <motion.div
           ref={ref}
           key={index}
-          className={`p-4 md:p-8 w-full md:w-1/2 rounded-2xl shadow-xl border border-slate-900/10 dark:border-slate-50/[0.06] ${classNames}`}
+          className={`p-4 md:p-8 w-full md:w-1/2 rounded-2xl border border-slate-900/10 dark:border-slate-50/[0.06] ${classNames}`}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={sectionVariants}
@@ -80,7 +82,9 @@ const AnimatedTextSection: React.FC<AnimatedTextSectionProps> = ({
             animate={isInView ? "visible" : "hidden"}
           >
             <motion.h1
-              className="text-xl md:text-2xl text-white font-semibold mb-2"
+              className={`text-xl md:text-2xl ${
+                textColor ? textColor : "text-white"
+              } font-semibold mb-2`}
               variants={headerVariants}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
@@ -90,7 +94,7 @@ const AnimatedTextSection: React.FC<AnimatedTextSectionProps> = ({
               {section.paragraphs.map((paragraph, pIndex) => (
                 <motion.p
                   key={pIndex}
-                  className="text-base mb-2"
+                  className={`${textColor ? textColor : ""} text-base mb-2`}
                   variants={paragraphVariants}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
