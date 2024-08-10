@@ -55,17 +55,15 @@ const AnimatedTextSection: React.FC<AnimatedTextSectionProps> = ({
   classNames,
   textColor,
 }) => {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 100px -50px 0px",
+  });
+
   return (
     <section className={`flex flex-col md:flex-row gap-4 w-full`}>
       {sections.map((section, index) => {
-        // Create a ref for each section
-        const ref = React.useRef<HTMLDivElement>(null);
-        // Use `useInView` hook for each section
-        const isInView = useInView(ref, {
-          once: true,
-          margin: "0px 100px -50px 0px",
-        });
-
         return (
           <motion.div
             ref={ref}
