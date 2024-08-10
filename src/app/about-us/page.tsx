@@ -1,10 +1,10 @@
 import React from "react";
 import ProfileCard from "../ui/ProfileCard";
 import ContentSection from "../components/ContentSection";
-import AnimatedTextSection from "../components/AnimatedSection";
 import { sectionsData } from "../constants/about-section-data";
 import VideoSection from "../components/Video";
 import { TEAM_MEMBERS } from "../constants/team-members";
+import AnimatedTextSection from "../components/AnimatedTextSection";
 
 const AboutUs = () => {
   return (
@@ -29,7 +29,7 @@ const AboutUs = () => {
       <section>
         <AnimatedTextSection
           sections={sectionsData}
-          classNames="bg-gradient-to-tr from-[#000000] via-[#001116] to-[#000000]"
+          classNames="bg-gradient-to-tr from-[#000000] via-[#001116] to-[#000000] p-4 md:p-8"
         />
       </section>
       <section className="pb-4 pt-32">
