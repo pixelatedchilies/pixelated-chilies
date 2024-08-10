@@ -49,7 +49,7 @@ const Navbar = () => {
                 aria-label="close sidebar"
                 className="drawer-overlay"
               ></label>
-              <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4 flex flex-col gap-1">
+              <ul className="menu bg-black text-base-content min-h-full w-80 p-4 flex flex-col gap-12">
                 <li aria-label="close sidebar">
                   <Link href={"/"}>
                     <Image
@@ -60,16 +60,36 @@ const Navbar = () => {
                     />
                   </Link>
                 </li>
-                {menuLinks.map(({ id, href, title }) => (
-                  <li key={id} onClick={closeDrawer}>
-                    <Link
-                      href={href}
-                      className="text-base text-white font-normal"
-                    >
-                      {title}
-                    </Link>
-                  </li>
-                ))}
+                <ul>
+                  {menuLinks.map(({ id, href, title }) => (
+                    <li key={id} onClick={closeDrawer}>
+                      <Link
+                        href={href}
+                        className="text-base text-white font-normal"
+                      >
+                        {title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex gap-4 pl-3">
+                  <a>
+                    <Image
+                      src="/facebook.svg"
+                      alt="Facebook icon"
+                      width={20}
+                      height={20}
+                    />
+                  </a>
+                  <a>
+                    <Image
+                      src="/instagram.svg"
+                      alt="Instagram icon"
+                      width={32}
+                      height={32}
+                    />
+                  </a>
+                </div>
               </ul>
             </div>
           </div>

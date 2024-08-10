@@ -11,6 +11,9 @@ import {
 } from "../constants/solutionsList";
 import Timeline from "../components/Timeline";
 import { timelineItems } from "../constants/timelineItems";
+import QuoteSection from "../components/QuoteSection";
+import AnimatedTextSection from "../components/AnimatedSection";
+import { whyChooseUsData } from "../constants/why-choose-us-section-data";
 
 const Services: React.FC = () => {
   return (
@@ -62,6 +65,21 @@ const Services: React.FC = () => {
       <section className="container my-16 flex flex-col gap-8 md:gap-12">
         <ContentSection title="How it works?" alignment="center" />
         <Timeline items={timelineItems} />
+      </section>
+      <section className="mt-16">
+        <QuoteSection />
+      </section>
+      <section className="bg-white py-12 px-4 lg:p-20 flex flex-col gap-8">
+        <ContentSection
+          title="Why choose us?"
+          textColor="text-black"
+          className="flex md:justify-center pl-4"
+        />
+        <hr className="border-[0.5px] border-black" />
+        <AnimatedTextSection
+          sections={whyChooseUsData}
+          textColor="text-black"
+        />
       </section>
     </main>
   );
