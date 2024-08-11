@@ -7,16 +7,24 @@ interface AnimatedTextSectionProps {
     paragraphs: string[];
   }[];
   classNames?: string;
+  containerClassNames?: string;
   textColor?: string;
 }
 
 const AnimatedTextSection: React.FC<AnimatedTextSectionProps> = ({
   sections,
+  containerClassNames,
   classNames,
   textColor,
 }) => {
   return (
-    <section className={`flex flex-col md:flex-row gap-4 w-full`}>
+    <section
+      className={`${
+        containerClassNames
+          ? containerClassNames
+          : "w-full flex flex-col md:flex-row gap-4"
+      }`}
+    >
       {sections.map((section, index) => (
         <AnimatedSection
           key={index}

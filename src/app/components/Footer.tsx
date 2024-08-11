@@ -42,14 +42,20 @@ const Footer = () => {
           </nav>
           <nav>
             <h6 className="font-normal text-white text-lg">Legal</h6>
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Imprint</a>
+            <a className="link link-hover" href="terms-of-use">
+              Terms of use
+            </a>
+            <a className="link link-hover" href="privacy-policy">
+              Privacy policy
+            </a>
+            <a className="link link-hover" href="/imprint">
+              Imprint
+            </a>
           </nav>
         </div>
-        <div className="footer text-base-content border-slate-900/10 dark:border-slate-50/[0.06] border-t px-6 py-4">
+        <div className="footer text-base-content border-slate-900/10 dark:border-slate-50/[0.06] border-t px-4 py-4">
           <aside className="grid-flow-col items-center">
-            <p>
+            <p className="font-normal">
               Pixelated Chilies
               <br />
               Your digital marketing agency for growth
