@@ -1,19 +1,19 @@
 import React from "react";
-import RenderServices from "../ui/renderers/RenderServices";
-import { services } from "../constants/services";
-import VideoSection from "../components/Video";
-import ContentSection from "../components/ContentSection";
-import HeroSection from "../components/HeroSection";
+import RenderServices from "../../ui/renderers/RenderServices";
+import { services } from "../../constants/services";
+import VideoSection from "../../components/Video";
+import ContentSection from "../../components/ContentSection";
+import HeroSection from "../../components/HeroSection";
 import {
   paymentList,
   productShowcaseList,
   schedulingList,
-} from "../constants/solutionsList";
-import Timeline from "../components/Timeline";
-import { timelineItems } from "../constants/timelineItems";
-import QuoteSection from "../components/QuoteSection";
-import AnimatedTextSection from "../components/AnimatedTextSection";
-import { whyChooseUsData } from "../constants/why-choose-us-section-data";
+} from "../../constants/solutionsList";
+import Timeline from "../../components/Timeline";
+import { timelineItems } from "../../constants/timelineItems";
+import QuoteSection from "../../components/QuoteSection";
+import AnimatedTextSection from "../../components/AnimatedTextSection";
+import { whyChooseUsData } from "../../constants/why-choose-us-section-data";
 
 const Services: React.FC = () => {
   return (
@@ -70,11 +70,12 @@ const Services: React.FC = () => {
         <QuoteSection />
       </section>
       <section className="container">
-        <section className="bg-white my-4 px-4 py-8 md:p-16 mt-8 rounded-lg">
+        <section className="bg-white my-6 px-4 py-8 md:p-16 rounded-lg">
           <ContentSection
             title="Why choose us?"
             textColor="text-black"
             className="flex md:justify-center"
+            headingSize="text-2xl md:text-3xl"
           />
           <hr className="border-[0.5px] border-black" />
           <section className="pt-8">

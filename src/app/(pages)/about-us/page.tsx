@@ -1,10 +1,10 @@
 import React from "react";
-import ProfileCard from "../ui/ProfileCard";
-import ContentSection from "../components/ContentSection";
-import { sectionsData } from "../constants/about-section-data";
-import VideoSection from "../components/Video";
-import { TEAM_MEMBERS } from "../constants/team-members";
-import AnimatedTextSection from "../components/AnimatedTextSection";
+import ProfileCard from "../../ui/ProfileCard";
+import ContentSection from "../../components/ContentSection";
+import { sectionsData } from "../../constants/about-section-data";
+import VideoSection from "../../components/Video";
+import { TEAM_MEMBERS } from "../../constants/team-members";
+import AnimatedTextSection from "../../components/AnimatedTextSection";
 
 const AboutUs = () => {
   return (
