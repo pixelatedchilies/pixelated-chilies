@@ -42,11 +42,11 @@ const Footer = () => {
           </nav>
           <nav>
             <h6 className="font-normal text-white text-lg">Legal</h6>
-            <a className="link link-hover" href="terms-of-use">
-              Terms of use
+            <a className="link link-hover" href="terms-and-conditions">
+              Terms and Conditions
             </a>
             <a className="link link-hover" href="privacy-policy">
-              Privacy policy
+              Privacy Policy
             </a>
             <a className="link link-hover" href="/imprint">
               Imprint
