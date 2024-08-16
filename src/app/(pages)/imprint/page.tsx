@@ -5,7 +5,7 @@ import React from "react";
 
 const Imprint: React.FC = () => {
   return (
-    <main className="container h-screen">
+    <main className="container py-20">
       <ContentSection
         title="Imprint"
         alignment="left"

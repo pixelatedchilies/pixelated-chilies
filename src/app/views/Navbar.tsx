@@ -57,6 +57,7 @@ const Navbar = () => {
                       width={170}
                       height={25}
                       alt="Pixelated Chilies logo"
+                      priority
                     />
                   </Link>
                 </li>
@@ -87,6 +88,7 @@ const Navbar = () => {
                       alt="Instagram icon"
                       width={32}
                       height={32}
+                      priority
                     />
                   </a>
                 </div>
@@ -99,6 +101,7 @@ const Navbar = () => {
               width={170}
               height={25}
               alt="Pixelated Chilies logo"
+              priority
             />
           </Link>
         </div>
