@@ -26,7 +26,7 @@ export const privacyPolicy: SectionsData[] = [
       "Changes to This Privacy Policy:",
       "We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes to this Privacy Policy by posting the updated version on the Website and updating the 'Last Updated' date at the top of the page.",
       "Contact Us:",
-      "If you have any questions or concerns about this Privacy Policy or our privacy practices, you may contact us at info@pixelatedchilies.com",
+      "If you have any questions or concerns about this Privacy Policy or Our Privacy Practices, you may contact us at info@pixelatedchilies.com",
       "Last Updated: August 16, 2024.",
     ],
   },
