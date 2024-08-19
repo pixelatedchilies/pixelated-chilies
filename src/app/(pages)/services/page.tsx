@@ -29,6 +29,7 @@ const Services: React.FC = () => {
               title="Our services"
               description="We specialize in crafting stunning websites and effective e-commerce platforms, managing your social media presence, and designing compelling brand identities. Our interactive funnels optimize customer journeys, while our social recruiting strategies help you attract top talent."
               alignment="center"
+              headingLevel="h1"
             />
           </div>
         </section>

@@ -11,6 +11,7 @@ const Imprint: React.FC = () => {
         alignment="left"
         headingSize="text-2xl md:text-3xl"
         className="mt-12 mb-4"
+        headingLevel="h1"
       />
       <AnimatedTextSection
         sections={imprintData}

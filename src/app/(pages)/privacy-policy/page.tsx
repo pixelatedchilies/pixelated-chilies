@@ -16,6 +16,7 @@ const PrivacyPolicy = () => {
         alignment="left"
         headingSize="text-2xl md:text-3xl"
         className="mt-12 mb-4"
+        headingLevel="h1"
       />
       <section className="flex flex-col gap-4">
         {dataSections.map((sections, index) => (

@@ -22,6 +22,7 @@ const AboutUs = () => {
                 technology with creative design to deliver websites that are not
                 only visually stunning but also highly functional."
               alignment="center"
+              headingLevel="h1"
             />
           </div>
         </section>
