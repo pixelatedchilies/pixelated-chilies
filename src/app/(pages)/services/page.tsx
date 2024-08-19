@@ -1,19 +1,19 @@
 import React from "react";
-import RenderServices from "../../ui/renderers/RenderServices";
-import { services } from "../../constants/services";
+import HeroSection from "../../components/HeroSection";
+import QuoteSection from "../../components/QuoteSection";
 import VideoSection from "../../components/Video";
 import ContentSection from "../../components/ContentSection";
-import HeroSection from "../../components/HeroSection";
+import RenderServices from "../../ui/renderers/RenderServices";
+import AnimatedTextSection from "../../components/AnimatedTextSection";
+import Timeline from "../../components/Timeline";
+import { services } from "../../constants/services";
+import { timelineItems } from "../../constants/timelineItems";
+import { whyChooseUsData } from "../../constants/why-choose-us-section-data";
 import {
   paymentList,
   productShowcaseList,
   schedulingList,
 } from "../../constants/solutionsList";
-import Timeline from "../../components/Timeline";
-import { timelineItems } from "../../constants/timelineItems";
-import QuoteSection from "../../components/QuoteSection";
-import AnimatedTextSection from "../../components/AnimatedTextSection";
-import { whyChooseUsData } from "../../constants/why-choose-us-section-data";
 
 const Services: React.FC = () => {
   return (
