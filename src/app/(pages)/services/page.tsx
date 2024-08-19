@@ -70,18 +70,19 @@ const Services: React.FC = () => {
         <QuoteSection />
       </section>
       <section className="container">
-        <section className="bg-white my-6 px-4 py-8 md:p-16 rounded-lg">
+        <section className="my-16 rounded-lg">
           <ContentSection
             title="Why choose us?"
-            textColor="text-black"
+            textColor="text-white"
             className="flex md:justify-center"
             headingSize="text-2xl md:text-3xl"
           />
           <hr className="border-[0.5px] border-black" />
-          <section className="pt-8">
+          <section className="pt-2 md:pt-4">
             <AnimatedTextSection
               sections={whyChooseUsData}
-              textColor="text-black"
+              textColor="text-white"
+              classNames="bg-gradient-to-tr from-[#000000] via-[#001116] to-[#000000] border border-slate-900/10 dark:border-slate-50/[0.06] p-4"
             />
           </section>
         </section>
