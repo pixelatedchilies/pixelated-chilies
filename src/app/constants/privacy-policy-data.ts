@@ -31,3 +31,23 @@ export const privacyPolicy: SectionsData[] = [
     ],
   },
 ];
+
+export const heyFlowSnippetDataPrivacy: SectionsData[] = [
+  {
+    title: "Heyflow Snippet",
+    paragraphs: [
+      "We use interactive request forms ('flows') powered by Heyflow to collect and process information about your needs.",
+      "On https://pxchilies.com (Pixelated Chilies), we use these flows to gather details such as the specific services you are interested in (e.g., web development, landing pages, flows, social recruiting). The data collected through these forms is used to communicate with you and understand your preferences, helping us tailor our services to better meet your needs.",
+      "Data Processing with Heyflow:",
+      "The creation and use of these flows are supported by Heyflow GmbH, Jungfernstieg 49, 20354 Hamburg, Germany ('Heyflow'). Heyflow processes the personal data collected via these flows on our behalf and strictly according to our instructions, as per a contract processing agreement. Heyflow's services, including the personal data collected, are hosted and processed exclusively on servers within the European Union, utilizing the Google Cloud Platform and Amazon Web Services (AWS).",
+      "Third-Party Integrations",
+      "We link our flows with the following third-party tools to enhance our service capabilities:",
+      "- Google Analytics: For tracking and analyzing visitor behavior on our website.",
+      "- Google Ads: To optimize our advertising efforts and improve targeting.",
+      "- Meta Conversions: For tracking conversions and performance metrics related to our social media campaigns.",
+      "These integrations help us improve our website's performance, optimize our marketing strategies, and better serve our customers by analyzing and acting on the data collected.",
+      "Privacy Details",
+      "Further details on how Heyflow processes data can be found at https://heyflow.com/legal/data-privacy/.",
+    ],
+  },
+];

@@ -1,7 +1,7 @@
-import AnimatedTextSection from "@/app/components/AnimatedTextSection";
-import ContentSection from "@/app/components/ContentSection";
-import { imprintData } from "@/app/constants/imprint-section-data";
 import React from "react";
+import ContentSection from "@/app/components/ContentSection";
+import AnimatedTextSection from "@/app/components/AnimatedTextSection";
+import { imprintData } from "@/app/constants/imprint-section-data";
 
 const Imprint: React.FC = () => {
   return (
