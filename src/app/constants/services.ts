@@ -39,7 +39,7 @@ export const services: Service[] = [
     id: 3,
     title: "Social Media Management",
     description:
-      "Create captivating landing pages optimized for maximum engagement and lead generation.",
+      "Engage with your audience, and drive meaningful interactions through strategic content and consistent presence.",
     src: "/social-media.svg",
     tools: "/social-media-tools.svg",
     toolsImageProps: {
@@ -65,7 +65,11 @@ export const services: Service[] = [
     description:
       "Streamline your customer journey and maximize conversions with expertly crafted funnels.",
     src: "/interactive-funnels.svg",
-    tools: "/",
+    tools: "/interactive-funnels-tools.svg",
+    toolsImageProps: {
+      width: 140,
+      height: 35,
+    },
   },
   {
     id: 6,
