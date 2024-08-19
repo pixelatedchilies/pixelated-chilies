@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import {
   paymentList,
   productShowcaseList,
@@ -7,12 +8,16 @@ import { services } from "./constants/services";
 import { accordionItems } from "./constants/accordion";
 import ContentSection from "./components/ContentSection";
 import HeroSection from "./components/HeroSection";
-import VideoSection from "./components/Video";
 import RenderServices from "./ui/renderers/RenderServices";
 import Loader from "./ui/Loader";
 import Accordion from "./components/Accordion";
-import HeyflowWidget from "./components/HeyflowWidget";
 import QuoteSection from "./components/QuoteSection";
+const VideoSection = dynamic(() => import("./components/Video"), {
+  ssr: false,
+});
+const HeyflowWidget = dynamic(() => import("./components/HeyflowWidget"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -30,6 +35,7 @@ export default function Home() {
                 description="Dedicated to launch grow and elevate your brand's success"
                 alignment="center"
                 button="Discover your growth plan"
+                headingLevel="h1"
               />
             </div>
           </section>

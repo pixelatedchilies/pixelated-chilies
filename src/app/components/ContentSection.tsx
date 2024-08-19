@@ -10,6 +10,7 @@ interface ContentSectionProps {
   button?: string;
   textColor?: string;
   headingSize?: string;
+  headingLevel?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
 const ContentSection: React.FC<ContentSectionProps> = ({
@@ -20,6 +21,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   button,
   headingSize,
   textColor,
+  headingLevel = "h2",
 }) => {
   const alignmentClasses = {
     left: "text-left",
@@ -27,23 +29,27 @@ const ContentSection: React.FC<ContentSectionProps> = ({
     right: "text-right",
   };
 
+  const HeadingTag = headingLevel;
+
   return (
-    <section className={`${className}`}>
-      <div className={`${alignmentClasses[alignment]}`}>
+    <section className={className}>
+      <div className={alignmentClasses[alignment]}>
         <MotionText delay={0}>
-          <h2
-            className={`${textColor ? textColor : "text-white"} font-semibold ${
-              headingSize ? headingSize : "text-3xl"
+          <HeadingTag
+            className={`${textColor || "text-white"} font-semibold ${
+              headingSize || "text-3xl"
             } mb-2`}
           >
             {title}
-          </h2>
+          </HeadingTag>
         </MotionText>
-        <MotionText delay={0.3}>
-          <p className={`${textColor ? textColor : "text-white"} font-light`}>
-            {description}
-          </p>
-        </MotionText>
+        {description && (
+          <MotionText delay={0.3}>
+            <p className={`${textColor || "text-white"} font-light`}>
+              {description}
+            </p>
+          </MotionText>
+        )}
         {button && (
           <MotionText delay={0.6}>
             <Link
