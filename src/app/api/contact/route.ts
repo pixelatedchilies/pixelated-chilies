@@ -21,8 +21,8 @@ export async function POST(request: Request) {
     text: message,
     html: `<p><strong>Name:</strong> ${name}</p>
            <p><strong>Email:</strong> ${email}</p>
-           <p><strong>Message:</strong></p>
-           <p>${message}</p>`,
+           <p><strong>Message:</strong> ${message}</p>
+           <p><strong>Date:</strong> ${new Date()}</p>`,
     replyTo: email,
   };
 
