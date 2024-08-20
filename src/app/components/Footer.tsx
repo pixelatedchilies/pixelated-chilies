@@ -23,7 +23,9 @@ const Footer = () => {
             <Link className="link link-hover" href="/services">
               Our services
             </Link>
-            <a className="link link-hover">Contact us</a>
+            <Link className="link link-hover" href="/contact">
+              Contact us
+            </Link>
             <a
               className="link link-hover"
               href="https://help.pixelatedchilies.com"
