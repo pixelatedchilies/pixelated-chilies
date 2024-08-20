@@ -5,19 +5,19 @@ export async function POST(request: Request) {
   const { name, email, message } = await request.json();
 
   const transporter = nodemailer.createTransport({
-    host: process.env.HOST_URL,
+    host: process.env.EMAIL_HOST_URL,
     port: 465,
     secure: true,
     auth: {
-      user: process.env.AUTH_USER,
-      pass: process.env.AUTH_PASSWORD,
+      user: process.env.EMAIL_AUTH_USER,
+      pass: process.env.EMAIL_AUTH_PASSWORD,
     },
   });
 
   const mailOptions = {
     from: '"Contact Form" <info@pixelatedchilies.com>',
     to: "info@pixelatedchilies.com",
-    subject: `New message from ${email} ${name}`,
+    subject: `New message from ${name}`,
     text: message,
     replyTo: email,
   };
