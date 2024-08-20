@@ -15,8 +15,8 @@ export async function POST(request: Request) {
   });
 
   const mailOptions = {
-    from: '"Contact Form" <info@pixelatedchilies.com>',
-    to: "info@pixelatedchilies.com",
+    from: `"Contact Form" <${process.env.EMAIL_AUTH_USER}>`,
+    to: `${process.env.EMAIL_AUTH_USER}`,
     subject: `New message from ${name}`,
     text: message,
     replyTo: email,
