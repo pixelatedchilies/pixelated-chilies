@@ -60,7 +60,10 @@ const ContactForm = () => {
               id="name"
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => {
+                setName(e.target.value);
+                setError(false);
+              }}
               required
               placeholder="Your name..."
             />
@@ -77,7 +80,10 @@ const ContactForm = () => {
               id="email"
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                setError(false);
+              }}
               required
               placeholder="Your email..."
             />
@@ -93,7 +99,10 @@ const ContactForm = () => {
               id="message"
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={(e) => {
+                setMessage(e.target.value);
+                setError(false);
+              }}
               rows={5}
               required
               placeholder="Your message..."
