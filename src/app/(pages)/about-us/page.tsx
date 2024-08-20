@@ -1,10 +1,45 @@
-import React from "react";
-import ProfileCard from "../../ui/ProfileCard";
-import ContentSection from "../../components/ContentSection";
-import { sectionsData } from "../../constants/about-section-data";
-import VideoSection from "../../components/Video";
-import { TEAM_MEMBERS } from "../../constants/team-members";
+import { Metadata } from "next";
 import AnimatedTextSection from "../../components/AnimatedTextSection";
+import ContentSection from "../../components/ContentSection";
+import VideoSection from "../../components/Video";
+import { sectionsData } from "../../constants/about-section-data";
+import { TEAM_MEMBERS } from "../../constants/team-members";
+import ProfileCard from "../../ui/ProfileCard";
+
+export const metadata: Metadata = {
+  title: "About Us - Pixelated Chilies | Your Digital Marketing Agency",
+  description:
+    "Discover Pixelated Chilies, a top digital marketing agency specializing in web development, SEO, social media management, and innovative brand strategies. Elevate your business with us.",
+  keywords: [
+    "digital marketing agency",
+    "SEO services",
+    "brand strategy",
+    "web development",
+    "social media management",
+    "e-commerce marketing",
+    "custom web development",
+    "brand design",
+    "social recruiting",
+  ],
+  alternates: {
+    canonical: "https://pxchilies.com/about-us",
+  },
+  openGraph: {
+    title: "About Us - Pixelated Chilies | Your Digital Marketing Agency",
+    description:
+      "Learn more about Pixelated Chilies, our team of marketing experts, and how we help brands grow with innovative digital strategies.",
+    url: "https://pxchilies.com/about-us",
+    siteName: "Pixelated Chilies",
+    images: [
+      {
+        url: "https://pxchilies.com/og-image.jpg",
+        width: 1920,
+        height: 921,
+        alt: "Pixelated Chilies OG Image",
+      },
+    ],
+  },
+};
 
 const AboutUs = () => {
   return (

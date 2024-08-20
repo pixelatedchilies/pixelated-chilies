@@ -1,19 +1,55 @@
+import { Metadata } from "next";
 import React from "react";
-import HeroSection from "../../components/HeroSection";
-import QuoteSection from "../../components/QuoteSection";
-import VideoSection from "../../components/Video";
-import ContentSection from "../../components/ContentSection";
-import RenderServices from "../../ui/renderers/RenderServices";
-import AnimatedTextSection from "../../components/AnimatedTextSection";
-import Timeline from "../../components/Timeline";
-import { services } from "../../constants/services";
-import { timelineItems } from "../../constants/timelineItems";
-import { whyChooseUsData } from "../../constants/why-choose-us-section-data";
+import AnimatedTextSection from "@/app/components/AnimatedTextSection";
+import ContentSection from "@/app/components/ContentSection";
+import HeroSection from "@/app/components/HeroSection";
+import QuoteSection from "@/app/components/QuoteSection";
+import Timeline from "@/app/components/Timeline";
+import VideoSection from "@/app/components/Video";
+import { services } from "@/app/constants/services";
 import {
   paymentList,
   productShowcaseList,
   schedulingList,
-} from "../../constants/solutionsList";
+} from "@/app/constants/solutionsList";
+import { timelineItems } from "@/app/constants/timelineItems";
+import { whyChooseUsData } from "@/app/constants/why-choose-us-section-data";
+import RenderServices from "@/app/ui/renderers/RenderServices";
+
+export const metadata: Metadata = {
+  title: "Services - Pixelated Chilies | Your Digital Marketing Agency",
+  description:
+    "Explore a wide range of digital marketing services at Pixelated Chilies. From web development and SEO to social media management and brand design, we provide customized solutions to help your business grow.",
+  keywords: [
+    "digital marketing agency",
+    "SEO services",
+    "brand strategy",
+    "web development",
+    "social media management",
+    "e-commerce solutions",
+    "custom web design",
+    "branding",
+    "digital marketing services",
+  ],
+  alternates: {
+    canonical: "https://pxchilies.com/services",
+  },
+  openGraph: {
+    title: "Services - Pixelated Chilies | Your Digital Marketing Agency",
+    description:
+      "Pixelated Chilies offers comprehensive digital marketing services, including custom web development, SEO, social media management, innovative brand strategies and interactive funnels. Elevate your business with our expert solutions.",
+    url: "https://pxchilies.com/services",
+    siteName: "Pixelated Chilies",
+    images: [
+      {
+        url: "https://pxchilies.com/og-image.jpg",
+        width: 1920,
+        height: 921,
+        alt: "Pixelated Chilies Services",
+      },
+    ],
+  },
+};
 
 const Services: React.FC = () => {
   return (
@@ -26,8 +62,8 @@ const Services: React.FC = () => {
           {/* Content Section */}
           <div className="relative z-10 flex items-center justify-center h-full md:w-2/3 mx-auto">
             <ContentSection
-              title="Our services"
-              description="We specialize in crafting stunning websites and effective e-commerce platforms, managing your social media presence, and designing compelling brand identities. Our interactive funnels optimize customer journeys, while our social recruiting strategies help you attract top talent."
+              title="Our Services"
+              description="We provide tailored digital marketing solutions, including web development, e-commerce platforms, social media management, brand identity design and interactive funnels. Partner with us to create impactful, results-driven campaigns that elevate your brand."
               alignment="center"
               headingLevel="h1"
             />
