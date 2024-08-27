@@ -32,17 +32,17 @@ export const metadata: Metadata = {
     "digital marketing services",
   ],
   alternates: {
-    canonical: "https://pxchilies.com/services",
+    canonical: "pxchilies.com/services",
   },
   openGraph: {
     title: "Services - Pixelated Chilies | Your Digital Marketing Agency",
     description:
       "Pixelated Chilies offers comprehensive digital marketing services, including custom web development, SEO, social media management, innovative brand strategies and interactive funnels. Elevate your business with our expert solutions.",
-    url: "https://pxchilies.com/services",
+    url: "pxchilies.com/services",
     siteName: "Pixelated Chilies",
     images: [
       {
-        url: "https://pxchilies.com/og-image.jpg",
+        url: "pxchilies.com/og-image.jpg",
         width: 1920,
         height: 921,
         alt: "Pixelated Chilies Services",
