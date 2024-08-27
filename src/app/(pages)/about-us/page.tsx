@@ -22,17 +22,17 @@ export const metadata: Metadata = {
     "social recruiting",
   ],
   alternates: {
-    canonical: "https://pxchilies.com/about-us",
+    canonical: "pxchilies.com/about-us",
   },
   openGraph: {
     title: "About Us - Pixelated Chilies | Your Digital Marketing Agency",
     description:
       "Learn more about Pixelated Chilies, our team of marketing experts, and how we help brands grow with innovative digital strategies.",
-    url: "https://pxchilies.com/about-us",
+    url: "pxchilies.com/about-us",
     siteName: "Pixelated Chilies",
     images: [
       {
-        url: "https://pxchilies.com/og-image.jpg",
+        url: "pxchilies.com/og-image.jpg",
         width: 1920,
         height: 921,
         alt: "Pixelated Chilies OG Image",
