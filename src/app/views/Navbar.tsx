@@ -74,7 +74,10 @@ const Navbar = () => {
                   ))}
                 </ul>
                 <div className="flex gap-4 pl-3">
-                  <a>
+                  <a
+                    className="footer-icon w-8"
+                    href="https://www.facebook.com/share/FGiVYtjHdVbEHU4R/?mibextid=LQQJ4d"
+                  >
                     <Image
                       src="/facebook.svg"
                       alt="Facebook icon"
@@ -82,13 +85,26 @@ const Navbar = () => {
                       height={20}
                     />
                   </a>
-                  <a>
+                  <a
+                    className="footer-icon w-8"
+                    href="https://www.instagram.com/pixelatedchilies?igsh=bm82NzRuZDV3bmNm"
+                  >
                     <Image
                       src="/instagram.svg"
                       alt="Instagram icon"
                       width={32}
                       height={32}
-                      priority
+                    />
+                  </a>
+                  <a
+                    className="footer-icon w-8"
+                    href="https://www.linkedin.com/company/pxchilies"
+                  >
+                    <Image
+                      src="/linkedin.svg"
+                      alt="Linkedin icon"
+                      width={20}
+                      height={20}
                     />
                   </a>
                 </div>

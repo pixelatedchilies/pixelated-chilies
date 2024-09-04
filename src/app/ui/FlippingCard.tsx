@@ -54,6 +54,13 @@ const FlippingCard: React.FC<FlippingCardProps> = ({
 
   const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
+    const servicesSection = document.getElementById("services");
+
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/#services";
+    }
   };
 
   return (

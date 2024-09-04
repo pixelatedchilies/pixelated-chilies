@@ -65,7 +65,10 @@ const Footer = () => {
           </aside>
           <nav className="md:place-self-center md:justify-self-end">
             <div className="grid grid-flow-col gap-4">
-              <a>
+              <a
+                className="footer-icon w-8"
+                href="https://www.facebook.com/share/FGiVYtjHdVbEHU4R/?mibextid=LQQJ4d"
+              >
                 <Image
                   src="/facebook.svg"
                   alt="Facebook icon"
@@ -73,12 +76,26 @@ const Footer = () => {
                   height={20}
                 />
               </a>
-              <a>
+              <a
+                className="footer-icon w-8"
+                href="https://www.instagram.com/pixelatedchilies?igsh=bm82NzRuZDV3bmNm"
+              >
                 <Image
                   src="/instagram.svg"
                   alt="Instagram icon"
                   width={32}
                   height={32}
+                />
+              </a>
+              <a
+                className="footer-icon w-8"
+                href="https://www.linkedin.com/company/pxchilies"
+              >
+                <Image
+                  src="/linkedin.svg"
+                  alt="Linkedin icon"
+                  width={20}
+                  height={20}
                 />
               </a>
             </div>
